@@ -8,6 +8,16 @@
 
         }
 
+        public static double Read(string room)
+        {
+            return double.Parse(File.ReadAllText($"{room}.txt"));
+
+        }
+
+        public static void Write(string room, double data)
+        {
+            File.WriteAllText($"{room}.txt", data.ToString());
+        }
         public static void Write(double data)
         {
 

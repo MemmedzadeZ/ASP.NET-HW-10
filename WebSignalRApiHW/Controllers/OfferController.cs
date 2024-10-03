@@ -24,7 +24,12 @@ namespace WebSignalRApiHW.Controllers
             FileHelper.Write(result);
         }
 
-   
-        
+        [HttpGet("IncreaseRoom")]
+        public void IncreaseRoom(string room, double data)
+        {
+            var result = FileHelper.Read(room) + data;
+            FileHelper.Write(room, result);
+        }
+
     }
 }
